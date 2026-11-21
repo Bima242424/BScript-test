@@ -1,0 +1,23 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Admin - BScript</title><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="center" id="login"><div class="box"><h3 style="margin-top:0">Admin Login</h3>
+<input id="em" type="email" placeholder="Email"><input id="pw" type="password" placeholder="Password">
+<button class="btn" id="lg" style="width:100%">Masuk</button></div></div>
+<main id="app" style="display:none"><div style="display:flex;justify-content:space-between"><h2>Admin BScript</h2><button class="btn sec" id="out">Keluar</button></div>
+<div class="panel"><h3>Pengaturan</h3>
+<label>Jumlah iklan/langkah</label><input id="adCount" type="number" min="1" max="10">
+<label>Detik tunggu per iklan</label><input id="stepSeconds" type="number" min="5">
+<label>Link iklan Monetag (Direct Link)</label><input id="monetagUrl">
+<label>URL web utama (contoh https://bscript.com)</label><input id="mainUrl">
+<label>URL domain verifikasi Server 1</label><input id="server1Url">
+<label>URL domain verifikasi Server 2</label><input id="server2Url">
+<label><input type="checkbox" id="server1Active" style="width:auto"> Server 1 aktif</label><br>
+<label><input type="checkbox" id="server2Active" style="width:auto"> Server 2 aktif</label><br><br>
+<button class="btn" id="saveS">Simpan Pengaturan</button></div>
+<div class="panel"><h3 id="ft">Tambah Script</h3><input type="hidden" id="sid">
+<label>Judul</label><input id="title"><label>Deskripsi</label><input id="desc">
+<label>Kategori</label><input id="category"><label>URL Gambar</label><input id="image">
+<label>Kode script</label><textarea id="code"></textarea>
+<button class="btn" id="saveSc">Simpan Script</button> <button class="btn sec" id="reset">Reset</button></div>
+<div class="panel"><h3>Daftar Script</h3><div id="list"></div></div></main>
+<div id="toast"></div><script type="module" src="js/admin.js"></script></body></html>

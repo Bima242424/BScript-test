@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{d}/documents {
+    function adm() { return request.auth != null && exists(/databases/$(d)/documents/admins/$(request.auth.uid)); }
+    match /scripts/{i}    { allow read: if true; allow write: if adm(); }
+    match /settings/{i}   { allow read: if true; allow write: if adm(); }
+    match /scriptCode/{i} { allow read, write: if adm(); }
+    match /admins/{i}     { allow read: if request.auth != null && request.auth.uid == i; allow write: if false; }
+    match /used/{i}       { allow read, write: if false; }
+  }
+}
