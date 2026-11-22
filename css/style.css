@@ -54,3 +54,5 @@ textarea{min-height:150px;font-family:ui-monospace,Consolas,monospace;font-size:
 #toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ac);color:#0a0b0d;font:600 13px var(--f);padding:10px 18px;border-radius:2px;display:none;z-index:20}
 @media(max-width:520px){.keybox{width:100%}.grid{grid-template-columns:1fr 1fr;gap:10px}.card .act{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.logo{margin:0;line-height:0}.logo a{display:inline-block}.logo img{height:34px;width:auto;display:block}.box .logo img{height:38px}
